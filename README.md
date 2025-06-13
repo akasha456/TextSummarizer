@@ -38,8 +38,8 @@
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/akasha456/TextSummarizer-NLP-based-Text-Summarization-Tool
-cd text-summarizer
+git clone https://github.com/akasha456/TextSummarizer
+cd TextSummarizer
 pip install -r requirements.txt
 streamlit run app.py
 ```
