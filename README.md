@@ -5,6 +5,8 @@
 ![NLP](https://img.shields.io/badge/NLP-BART_and_TextRank-purple)
 ![Status](https://img.shields.io/badge/status-Active-brightgreen)
 
+[![Deployed](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](https://textsummarizer-25.streamlit.app/)
+
 > ✨ A dual-mode summarization app using Abstractive (BART) and Extractive (TextRank) methods. Built with Streamlit and cutting-edge NLP libraries for efficient and human-like summarization.
 
 ---
