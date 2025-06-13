@@ -139,7 +139,7 @@ This project is licensed under the MIT License.
 
 ## 📸 Screenshots
 
-![Summarizer Demo](https://i.postimg.cc/qR2vHgDC/summarizer-ui-demo.jpg) <!-- Replace with actual screenshot URL -->
-
+[![Summarizer Demo1.jpg](https://i.postimg.cc/Jn3Bn6WX/Screenshot-2025-06-13-135104.png)](https://postimg.cc/LYXsQV54)
+[![Summarizer Demo2.jpg](https://i.postimg.cc/ydrCFBBC/Screenshot-2025-06-13-135132.png)](https://postimg.cc/CBD2g3zc)
 ---
 
