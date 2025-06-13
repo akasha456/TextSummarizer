@@ -1,147 +1,145 @@
-# Advanced Text Summarizer
+# 🧾 Advanced Text Summarizer
 
-A professional-grade text summarization application built with Streamlit and state-of-the-art NLP techniques. This app provides both extractive and abstractive summarization methods to generate high-quality summaries from any text input.
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![NLP](https://img.shields.io/badge/NLP-BART_and_TextRank-purple)
+![Status](https://img.shields.io/badge/status-Active-brightgreen)
 
-## 🌟 Features
-
-### Dual Summarization Methods
-- **Abstractive Summarization**: Uses Facebook's BART model to generate new, coherent summaries
-- **Extractive Summarization**: Implements TextRank algorithm to select and rank important sentences
-- **Comparison Mode**: View both methods side-by-side for comprehensive analysis
-
-### Advanced NLP Implementation
-- Custom TextRank implementation using TF-IDF vectorization and cosine similarity
-- NetworkX integration for PageRank algorithm application
-- Intelligent text chunking for processing long documents
-- Comprehensive text preprocessing and normalization
-
-### Interactive Features
-- Configurable parameters for both summarization methods
-- Built-in sample texts for quick testing
-- Real-time word counting and input validation
-- Compression ratio metrics to measure summary efficiency
-- Clean, responsive UI with progress indicators
-
-## 🚀 Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/akasha456/TextSummarizer-NLP-based-Text-Summarization-Tool
-cd text-summarizer
-```
-
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Run the application**
-```bash
-streamlit run app.py
-```
-
-## 📁 Project Structure
-
-```
-text-summarizer/
-├── app.py              # Main Streamlit application
-├── summarizers.py      # Summarization classes and functions
-├── utils.py           # Utility functions for text processing
-├── config.py          # Configuration settings and constants
-├── requirements.txt   # Project dependencies
-└── README.md         # Project documentation
-```
-
-## 🛠️ Usage
-
-### Basic Usage
-1. Launch the app using `streamlit run app.py`
-2. Choose your input method (Type/Paste or Sample Text)
-3. Configure summarization settings in the sidebar
-4. Click "Generate Summary" to process your text
-
-### Configuration Options
-
-#### Abstractive Summarization
-- **Max Summary Length**: 50-300 words (default: 150)
-- **Min Summary Length**: 20-100 words (default: 50)
-
-#### Extractive Summarization
-- **Number of Sentences**: 1-10 sentences (default: 3)
-
-### Summarization Methods
-
-#### 🤖 Abstractive Summarization
-- Uses BART (Bidirectional and Auto-Regressive Transformers)
-- Generates new sentences that capture the essence of the original text
-- Better at creating coherent, human-like summaries
-- May introduce information not explicitly stated in the source
-
-#### 🔗 Extractive Summarization
-- Uses TextRank algorithm (similar to PageRank)
-- Selects and ranks existing sentences from the original text
-- Preserves original wording and factual accuracy
-- Creates summaries by combining the most important sentences
-
-## 🔧 Technical Details
-
-### Dependencies
-- **Streamlit**: Web application framework
-- **Transformers**: Hugging Face transformers for BART model
-- **PyTorch**: Deep learning framework
-- **NLTK**: Natural language processing toolkit
-- **scikit-learn**: Machine learning library for TF-IDF
-- **NetworkX**: Graph algorithms for PageRank
-- **NumPy**: Numerical computing
-
-### Model Information
-- **Abstractive Model**: `facebook/bart-large-cnn`
-- **Text Processing**: NLTK with punkt tokenizer and stopwords
-- **Similarity Calculation**: TF-IDF with cosine similarity
-- **Ranking Algorithm**: PageRank via NetworkX
-
-## 🚀 Performance Features
-
-- **Caching**: Model loading and NLTK data downloads are cached for faster subsequent runs
-- **Chunking**: Long texts are intelligently split and processed in chunks
-- **Error Handling**: Comprehensive error handling with user-friendly messages
-- **Validation**: Input validation with helpful feedback
-
-## 🔍 Sample Texts
-
-The app includes built-in sample texts for testing:
-- **Technology Article**: AI and machine learning overview
-- **Scientific Research**: Climate change research summary
-
-## 📊 Metrics
-
-- **Compression Ratio**: Percentage reduction from original text to summary
-- **Word Count**: Real-time word counting for input validation
-- **Processing Time**: Visual feedback during summary generation
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Hugging Face for the BART model and Transformers library
-- Facebook AI Research for the BART architecture
-- NetworkX team for graph algorithms
-- Streamlit team for the amazing web framework
-
-## 📞 Support
-
-If you encounter any issues or have questions, please open an issue on GitHub or contact the maintainers.
+> ✨ A dual-mode summarization app using Abstractive (BART) and Extractive (TextRank) methods. Built with Streamlit and cutting-edge NLP libraries for efficient and human-like summarization.
 
 ---
 
-**Built with ❤️ using Python, Streamlit, and modern NLP techniques**
+## 🚀 Features
+
+* 🧠 **Abstractive Summarization** via Facebook's BART model
+* 🧩 **Extractive Summarization** using a custom TextRank algorithm
+* 🔀 **Comparison Mode** to view both summaries side-by-side
+* 📏 **Compression Ratio & Word Count Metrics**
+* 🔧 Real-time configuration of summary length/sentence count
+* 📎 Intelligent text chunking for long documents
+* 📜 Preloaded sample texts and word count validation
+* 💻 Streamlit-powered responsive UI with progress indicators
+
+---
+
+## 📌 Technologies Used
+
+| Component         | Tool/Library                                    |
+| ----------------- | ----------------------------------------------- |
+| Abstractive Model | `facebook/bart-large-cnn` (Transformers)        |
+| Extractive Method | Custom TextRank with TF-IDF & cosine similarity |
+| Graph Algorithm   | PageRank via NetworkX                           |
+| Tokenization      | NLTK (`punkt`, `stopwords`)                     |
+| Frontend          | Streamlit                                       |
+| ML Tools          | scikit-learn, PyTorch, NumPy                    |
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/akasha456/TextSummarizer-NLP-based-Text-Summarization-Tool
+cd text-summarizer
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+## 🧠 How It Works
+
+```mermaid
+flowchart TD
+    A[User Inputs Text] --> B[Text Preprocessing]
+    B --> C[Abstractive → BART Model]
+    B --> D[Extractive → TextRank + TF-IDF]
+    C --> E[Generated Summary]
+    D --> E
+    E --> F[Display in Streamlit with Metrics]
+```
+
+---
+
+## 📊 Configuration Options
+
+| Mode            | Parameters                                                              |
+| --------------- | ----------------------------------------------------------------------- |
+| **Abstractive** | Max Length: 50–300 (default: 150) <br> Min Length: 20–100 (default: 50) |
+| **Extractive**  | Number of Sentences: 1–10 (default: 3)                                  |
+
+---
+
+## 📂 Project Structure
+
+```
+text-summarizer/
+├── app.py              # Streamlit frontend
+├── summarizers.py      # BART & TextRank implementations
+├── utils.py            # Text processing utilities
+├── config.py           # Constants and app settings
+├── requirements.txt    # Python dependencies
+└── README.md           # Project documentation
+```
+
+---
+
+## 📈 Performance Features
+
+* ⚡ **Caching** for BART model and NLTK downloads
+* 📦 **Chunking** logic to handle large inputs
+* 🧩 **TF-IDF Cosine Similarity** + PageRank for extractive scoring
+* ❗ **Error Handling** with user-friendly messages
+
+---
+
+## 📝 Sample Texts
+
+Includes the following built-in examples:
+
+* 🧠 **Technology** – AI and ML overview
+* 🌍 **Scientific** – Climate change research
+
+---
+
+## 📏 Metrics Tracked
+
+| Metric                | Description                                |
+| --------------------- | ------------------------------------------ |
+| **Compression Ratio** | Percentage reduction in summary            |
+| **Word Count**        | Real-time display of input length          |
+| **Processing Time**   | UI-based feedback while generating summary |
+
+---
+
+## 🙌 Contributing
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add awesome feature"`
+4. Push the branch: `git push origin feature/your-feature`
+5. Submit a Pull Request 🚀
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 💬 Acknowledgements
+
+* [Facebook AI](https://ai.facebook.com) for the BART model
+* [Hugging Face Transformers](https://huggingface.co/transformers)
+* [NetworkX](https://networkx.org) for graph-based algorithms
+* [Streamlit](https://streamlit.io) for the web interface
+* [NLTK](https://www.nltk.org) and [scikit-learn](https://scikit-learn.org) for NLP utilities
+
+---
+
+## 📸 Screenshots
+
+![Summarizer Demo](https://i.postimg.cc/qR2vHgDC/summarizer-ui-demo.jpg) <!-- Replace with actual screenshot URL -->
+
+---
+
